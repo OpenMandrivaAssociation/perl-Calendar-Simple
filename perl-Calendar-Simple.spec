@@ -1,31 +1,33 @@
+%define upstream_name    Calendar-Simple
+%define upstream_version 1.20
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl extension to create simple calendars
-Name:		perl-Calendar-Simple
-Version:	1.20
-Release:	%mkrel 1
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/Calendar-Simple/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAVECROSS/Calendar-Simple-%{version}.tar.gz
-BuildArch:	noarch
+Url:		http://search.cpan.org/dist/Calendar-Simple/
+Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAVECROSS/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(ExtUtils::MakeMaker)
 # Required by the tests
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl extension to create simple calendars.
 
 %prep
-
-%setup -q -n Calendar-Simple-%{version}
-
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod -x lib/*/Simple.pm
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %check
@@ -49,4 +51,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/pcal
 %{perl_vendorlib}/Calendar
 %{_mandir}/man3/*
-
