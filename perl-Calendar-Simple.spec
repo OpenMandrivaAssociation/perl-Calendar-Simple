@@ -8,7 +8,7 @@ Release:	5
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/Calendar-Simple/
+Url:		https://search.cpan.org/dist/Calendar-Simple/
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAVECROSS/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
