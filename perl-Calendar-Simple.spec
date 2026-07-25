@@ -1,15 +1,15 @@
 %define upstream_name    Calendar-Simple
-%define upstream_version 1.21
+%define upstream_version v2.1.0
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/Calendar-Simple/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAVECROSS/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/davorg-cpan/calendar-simple
+Source0:	https://cpan.metacpan.org/authors/id/D/DA/DAVECROSS/Calendar-Simple-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
