@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.1.0
-Release:	3
+Release:	4
 
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
