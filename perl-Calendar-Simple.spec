@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.1.0
-Release:	5
+Release:	6
 
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
@@ -28,7 +28,7 @@ Perl extension to create simple calendars.
 chmod -x lib/*/Simple.pm
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
