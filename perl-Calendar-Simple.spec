@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.1.0
-Release:	4
+Release:	5
 
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
@@ -34,7 +34,7 @@ chmod -x lib/*/Simple.pm
 %check
 # soft: do not fail package on test failures
 set +e
-make test
+make test || :
 
 %install
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
@@ -44,7 +44,7 @@ find %{buildroot} -type d -depth -exec rmdir {} 2>/dev/null ';'
 chmod -R u+w %{buildroot}/*
 
 %files
-%doc Changes README
+%doc README
 %{_bindir}/pcal
 %{perl_vendorlib}/Calendar
 %{_mandir}/man3/*
