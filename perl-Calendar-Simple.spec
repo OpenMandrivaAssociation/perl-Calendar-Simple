@@ -1,9 +1,9 @@
 %define upstream_name    Calendar-Simple
-%define upstream_version v2.1.0
+%define upstream_version 2.1.0
 
 Name:		perl-%{upstream_name}
 Version:	2.1.0
-Release:	7
+Release:	8
 
 Summary:	Perl extension to create simple calendars
 License:	GPL+ or Artistic
